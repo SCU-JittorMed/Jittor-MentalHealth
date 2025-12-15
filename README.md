@@ -150,3 +150,12 @@ jittor_mental/
 2. 根据实际硬件资源调整batch_size和学习率
 3. 对于大型数据集，建议使用GPU加速训练
 4. 可以通过修改代码中的参数来调整模型结构和训练策略
+
+## 致谢
+
+本项目的开发受到了以下开源项目的启发和帮助：
+
+- [Time-Series-Library](https://github.com/thuml/Time-Series-Library.git) - 提供了先进的时间序列分析模型和基准测试
+- [Jittor](https://github.com/Jittor/jittor.git) - 高性能的深度学习框架，支持即时编译和元操作
+
+感谢这些项目的开发者们为开源社区做出的贡献！
