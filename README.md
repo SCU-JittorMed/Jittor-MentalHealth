@@ -100,6 +100,39 @@ featuress=(wobg_clip)
 lrs=(0.0002)
 ```
 
+### 目录结构
+
+```
+jittor_mental/
+├── run.py              # 主运行脚本，解析命令行参数并启动实验
+├── run.sh              # PyTorch环境运行脚本，包含参数组合
+├── runjt.sh            # Jittor环境运行脚本，包含参数组合
+├── data_factory.py     # 数据工厂，根据框架类型选择相应的数据加载器
+├── exp_basic.py        # 实验基础类，定义了实验的基本流程
+├── mental.py           # PyTorch版的心理健康数据加载器
+├── mental_jt.py        # Jittor版的心理健康数据加载器
+├── tools.py            # 工具函数
+├── layers/             # PyTorch版的模型层
+│   ├── Embed.py                # 嵌入层实现
+│   ├── SelfAttention_Family.py # 注意力机制家族实现
+│   ├── Transformer_EncDec.py   # Transformer编码器-解码器实现
+│   └── masking.py              # 掩码相关函数
+├── layers_jt/          # Jittor版的模型层
+│   ├── Embed.py                # 嵌入层实现
+│   ├── SelfAttention_Family.py # 注意力机制家族实现
+│   ├── Transformer_EncDec.py   # Transformer编码器-解码器实现
+│   └── masking.py              # 掩码相关函数
+├── models/             # 模型定义
+│   ├── Transformer.py          # PyTorch版的Transformer模型
+│   └── Transformer_jt.py       # Jittor版的Transformer模型
+└── tests/              # 测试脚本
+    ├── compare.py              # 框架间对比测试
+    ├── compare_emb.py          # 嵌入层对比测试
+    ├── compare_encdec.py       # 编码器-解码器对比测试
+    └── compare_trans.py        # Transformer模型对比测试
+```
+
+
 ## 支持的标签类型
 
 - `depression`: 抑郁症评估结果
